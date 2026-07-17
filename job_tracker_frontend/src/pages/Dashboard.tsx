@@ -36,7 +36,7 @@ const Dashboard = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     const ws = new WebSocket(
-      `ws://job-tracker-production-e526.up.railway.app/application/ws?token=${token}`,
+      `wss://job-tracker-production-e526.up.railway.app/application/ws?token=${token}`,
     );
 
     ws.onmessage = (event) => {
