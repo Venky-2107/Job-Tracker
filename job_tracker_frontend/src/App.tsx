@@ -3,7 +3,7 @@ import Login from "./pages/Login.tsx";
 import ProtectedRoute from "./components/ProtectedRoute.tsx";
 import Dashboard from "./pages/Dashboard.tsx";
 import Register from "./pages/Register.tsx";
-import ApplicationDetail from "./pages/ApplicationDetail.tsx";
+// import ApplicationDetail from "./pages/ApplicationDetail.tsx";
 import ApplicationForm from "./components/ApplicationForm.tsx";
 
 const router = createBrowserRouter([
@@ -31,14 +31,14 @@ const router = createBrowserRouter([
       </ProtectedRoute>
     ),
   },
-  {
-    path: "/application/:id",
-    element: (
-      <ProtectedRoute>
-        <ApplicationDetail />
-      </ProtectedRoute>
-    ),
-  },
+  // {
+  //   path: "/application/:id",
+  //   element: (
+  //     <ProtectedRoute>
+  //       <ApplicationDetail />
+  //     </ProtectedRoute>
+  //   ),
+  // },
   {
     path: "/application/:id/edit",
     element: (

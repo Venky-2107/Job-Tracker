@@ -3,7 +3,7 @@ import axios from "axios";
 // re-usable instance.
 // can be used anywhere in app frontend.
 const instance = axios.create({
-  baseURL: "http://127.0.0.1:8000",
+  baseURL: "https://job-tracker-production-e526.up.railway.app/",
   headers: {
     "Content-Type": "application/json",
   },
