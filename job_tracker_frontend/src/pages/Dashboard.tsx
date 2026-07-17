@@ -36,7 +36,7 @@ const Dashboard = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     const ws = new WebSocket(
-      `ws://127.0.0.1:8000/application/ws?token=${token}`,
+      `ws://job-tracker-theta-two.vercel.app/application/ws?token=${token}`,
     );
 
     ws.onmessage = (event) => {
