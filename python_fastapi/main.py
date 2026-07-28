@@ -19,7 +19,7 @@ Base.metadata.create_all(bind=engine)
 # middleware for CORS
 app.add_middleware(
     CORSMiddleware, 
-    allow_origins=['http://localhost:5173', 'https://job-tracker-theta-two.vercel.app', 'http://localhost:3000'],
+    allow_origins=['http://localhost:5173', 'https://job-tracker-theta-two.vercel.app', 'http://localhost:3000', "https://job-tracker-next-eg5xsgnyl-venky-2107s-projects.vercel.app"],
     allow_credentials=True,
     allow_methods=['*'],
     allow_headers=['*']
