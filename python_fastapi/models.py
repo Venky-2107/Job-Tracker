@@ -40,7 +40,7 @@ class Contacts(Base):
     social_url: Mapped[Optional[str]] = mapped_column()
     
     # maps to applications
-    application_id: Mapped[int] = mapped_column(ForeignKey('applications.id'))
+    application_id: Mapped[int] = mapped_column(ForeignKey('applications.id', ondelete="CASCADE"))
     
 # interview notes
 class InterviewNotes(Base):
@@ -52,5 +52,5 @@ class InterviewNotes(Base):
     notes: Mapped[str] = mapped_column(Text)
     
     # maps to applications
-    application_id: Mapped[int] = mapped_column(ForeignKey('applications.id'))
+    application_id: Mapped[int] = mapped_column(ForeignKey('applications.id', ondelete="CASCADE"))
     
