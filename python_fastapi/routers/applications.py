@@ -82,7 +82,7 @@ def get_all_applications(current_user = Depends(get_current_user), db: Session =
     if not user:
         raise HTTPException(status_code=404, detail="user not found!!")
     
-    return db.query(Application).filter(Application.user_id == user.id).all()
+    return db.query(Application).filter(Application.user_id == user.id).order_by(Application.id).all()
 
 # get application by id
 @appl_router.get('/{appl_id}', response_model=CreateApplicationResponse, status_code=200)
